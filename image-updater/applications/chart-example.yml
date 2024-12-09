@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: chart-example
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: example=ghcr.io/alexisfr/gitops-cert-level-2-examples
+    argocd-image-updater.argoproj.io/example.update-strategy: newest-build
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/alexisfr/gitops-cert-level-2-examples.git
+    targetRevision: HEAD
+    path: ./image-updater/chart/simple-go-app
+   
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: chart-example
+
+  # Sync policy
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true  
+   
