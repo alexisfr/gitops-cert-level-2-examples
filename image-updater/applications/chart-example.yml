@@ -6,9 +6,9 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/write-back-target: "helmvalues:../charts/simple-go-app/images-values.yaml"
-    argocd-image-updater.argoproj.io/image-list: example=ghcr.io/alexisfr/gitops-cert-level-2-examples
-    argocd-image-updater.argoproj.io/example.helm.image-name: example.image.name
-    argocd-image-updater.argoproj.io/example.helm.image-tag: example.image.tag
+    argocd-image-updater.argoproj.io/image-list: ghcr.io/alexisfr/gitops-cert-level-2-examples
+    argocd-image-updater.argoproj.io/helm.image-repository: image.repository
+    argocd-image-updater.argoproj.io/helm.image-tag: image.tag
     argocd-image-updater.argoproj.io/example.update-strategy: newest-build
 spec:
   project: default
