@@ -1,4 +1,4 @@
 example:
   image:
-    tag: 1.2.5
+    tag: 1.2.6
     name: ghcr.io/alexisfr/gitops-cert-level-2-examples
