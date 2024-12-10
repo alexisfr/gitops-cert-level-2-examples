@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: ghcr.io/alexisfr/gitops-cert-level-2-examples
   pullPolicy: IfNotPresent
-  tag: "2.7"
+  tag: "2.8"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
